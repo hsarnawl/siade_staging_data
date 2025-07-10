@@ -1,0 +1,29 @@
+---
+description: |-
+  ## retour 503
+  
+  Ce cas permet de tester :
+  - [Param. appel] Nom d'usage
+  - [Param. appel] Nom de naissance
+  - [Param. appel] 1 prénom
+  - [Param. appel] Date de naissance (jour,mois,année)
+  - [Param. appel] sexe masculin
+  - [Réponse] 400
+params:
+  nomUsage: 'CINQCENTTROIS'
+  nomNaissance: 'TEST'
+  prenoms:
+    - 'PRENOM'
+  anneeDateDeNaissance: 1978
+  moisDateDeNaissance: 4
+  jourDateDeNaissance: 4
+  codeInseeLieuDeNaissance: '44109'
+  codePaysLieuDeNaissance: '99100' #Bénéficiaire né en France
+  sexe: 'M'
+status: 503
+payload: |-
+  {
+    "error": "network_error",
+    "reason": "timeout of 10000 ms exceeded",
+    "message": "Une erreur est survenue lors de l'appel au fournisseur de donnée"
+  }
